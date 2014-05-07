@@ -1,0 +1,14 @@
+<div>
+
+
+  <% @stories.each do |story| %>
+    <div class='news_container'>
+      <h2 id="headline"><%= story.headline %></h2>
+      <p id="snippet"><%= story.snippet %></p>
+    </div>
+    <p>
+  <% end %>
+
+
+
+</div>
