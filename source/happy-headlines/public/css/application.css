@@ -8,3 +8,19 @@
 th {
   text-align: left;
 }
+
+#header {
+  text-align: center;
+}
+
+#headline {
+  color: #333;
+}
+
+#snippet {
+  color: #444;
+}
+
+.news_container {
+  border-bottom: black solid 1px;
+}

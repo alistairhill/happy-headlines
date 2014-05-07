@@ -22,6 +22,10 @@ gem 'shotgun'
 gem 'sidekiq'
 gem 'redis'
 
+gem 'dotenv'
+
+gem 'pry'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

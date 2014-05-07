@@ -25,6 +25,10 @@ require 'json'
 require 'sidekiq'
 require 'redis'
 
+require 'pry'
+
+require 'dotenv'
+Dotenv.load
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
