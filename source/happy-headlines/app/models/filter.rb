@@ -17,16 +17,18 @@ module Filter
     end
   end
 
+
+### you might be able to put this in the seed file? not sure about that though...
   def self.bad_news
-    bad_news_words_array = %w(worry bomb blast murder 
-    murdered killed stabbed beaten death burst nazi war 
-    warcrimes abuse withers Putin NSA Snowden politician 
-    climate suffering burned horrible terrible bad ugly 
+    bad_news_words_array = %w(worry bomb blast murder
+    murdered killed stabbed beaten death burst nazi war
+    warcrimes abuse withers Putin NSA Snowden politician
+    climate suffering burned horrible terrible bad ugly
     Ukraine corrupt WHO same-sex die )
   end
 
   def self.good_news
-    good_news_words_array = %w(happy peace great good 
+    good_news_words_array = %w(happy peace great good
       rescued saved exonerated extension peace released
       peaceful )
   end

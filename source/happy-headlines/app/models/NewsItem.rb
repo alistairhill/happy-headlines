@@ -1,3 +1,5 @@
+### It looks like you have a nice class here! You might want to make a database for this class with your attributes as fields in the database? It might be nice to store this information for future use, but maybe you don't. Idk.
+
 require_relative 'nytimes'
 
 class NewsItem
@@ -11,18 +13,18 @@ class NewsItem
   end
 
   def bad_news_words
-    bad_news_words_array = %w(worry bomb blast murder 
-    murdered killed stabbed beaten death burst nazi war 
-    warcrimes abuse withers Putin nsa snowden politician 
-    climate suffering burned horrible terrible bad ugly 
+    bad_news_words_array = %w(worry bomb blast murder
+    murdered killed stabbed beaten death burst nazi war
+    warcrimes abuse withers Putin nsa snowden politician
+    climate suffering burned horrible terrible bad ugly
     ukraine corrupt who same-sex die kill die )
   end
 
   def headline_is_good
-    # bad_news_words_array = %w(worry bomb blast murder 
-    # murdered killed stabbed beaten death burst nazi war 
-    # warcrimes abuse withers Putin nsa snowden politician 
-    # climate suffering burned horrible terrible bad ugly 
+    # bad_news_words_array = %w(worry bomb blast murder
+    # murdered killed stabbed beaten death burst nazi war
+    # warcrimes abuse withers Putin nsa snowden politician
+    # climate suffering burned horrible terrible bad ugly
     # ukraine corrupt who same-sex die kill die )
 
     bad_news_words.each do |word|
