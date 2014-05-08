@@ -1,5 +1,4 @@
-require_relative 'NewsItem'
-# require_relative 'filter'
+require_relative 'news_item'
 
 module Nytimes
   class Client
