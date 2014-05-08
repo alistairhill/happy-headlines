@@ -1,0 +1,27 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+
+th {
+  text-align: left;
+}
+
+#header {
+  text-align: center;
+}
+
+#headline {
+  color: #333;
+}
+
+#snippet {
+  color: #444;
+}
+
+.news_container {
+  border: black solid 1px;
+  /*border-bottom: black solid 1px;*/
+}
