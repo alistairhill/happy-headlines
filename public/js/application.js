@@ -15,6 +15,7 @@ var sportsPage = function(event) {
 
 var appendSportsArticles = function(response) {
   $('.home_page').remove()
+  $('.sports_page').remove()
   $('.container').append(response)
 }
 
@@ -30,6 +31,7 @@ var homePage = function(event) {
 }
 
 var appendHomePage = function(response) {
+  $('.home_page').remove()
   $('.sports_page').remove()
   $('.container').append(response)
 }

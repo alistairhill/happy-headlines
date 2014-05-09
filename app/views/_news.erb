@@ -1,9 +1,8 @@
 <div class="home_page">
   <% @stories.each do |story| %>
     <div class='news_container'>
-      <span class='headline'><%= story.headline %></span>
-      <p class='snippet'><%= story.snippet %> <a href="<%= story.url %>" target="_blank" class="more">read more</a>.</p>
-
+      <h2 class='headline'><%= story.headline %></h2>
+      <p class='snippet'><%= story.snippet %> <a href="<%= story.url %>" target="_blank">read more</a>.</p>
     </div>
     <p>
   <% end %>

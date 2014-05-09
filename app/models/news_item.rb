@@ -19,14 +19,16 @@ class NewsItem
   end
 
   def bad_news_words
-    bad_news_array = %w(worry bomb blast murder 
+    bad_news_array = %w(worry bomb blast murder marriage 
     murdered killed stabbed beaten death burst nazi war 
     warcrimes abuse withers putin nsa snowden politician 
     climate suffering burned horrible terrible bad ugly 
     ukraine corrupt who die kill die lost lose kgb cia
     venting dementia attack kidnap kidnapped victim army
     suspended punch drugs crime broken gop politican gun
-    guns ammo explosion ripped hurt)
+    guns ammo explosion ripped hurt egypt sues rwanda
+    holocause genocide nuclear assault greed MH370 terror
+    poorly lethal)
   end
 
   def news_is_good

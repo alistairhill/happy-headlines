@@ -1,8 +1,19 @@
+body {
+  /*background-image:url('../images/anchorman.jpg');*/
+  background-repeat:no-repeat;
+  /*background-size:contain;*/
+  background-position:top;
+  background-color: #555;
+  font: 12pt Helvetica, sans-serif;
+}
+
 .container {
   margin: 20px auto;
   width: 70%;
+  min-width: 320px;
+  max-width: 700px;
   padding: 10px 10px 10px 10px;
-  /*border: 1px dotted black;*/
+  border: 1px dotted white;
 }
 
 #header, #links, #date {
@@ -10,7 +21,8 @@
 }
 
 #header {
-  font-style: 50px;
+  font-size: 50px;
+  color: white;
 }
 
 #date {
@@ -56,15 +68,6 @@ a {
   text-decoration: none;
 }
 
-
-body {
-  background-image:url('../images/anchorman.jpg');
-  background-repeat:no-repeat;
-  /*background-size:contain;*/
-  background-position:top;
-  background-color: #000;
-}
-
 input {
-  
+  color: gray;
 }

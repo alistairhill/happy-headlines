@@ -12,6 +12,15 @@ end
 
 get '/sports' do
   client = Nytimes::Client.new
-  @sports = client.parse_sports
-  erb :_sports, layout: false
+  @stories = client.parse_sports
+  erb :_news, layout: false
 end
+
+get '/date' do
+  client = Nytimes::Client.new
+  date = params[:date].gsub('-','')
+  client.get_date(date)
+  @stories = client.parse_date
+  erb :_news#, layout: false
+end
+
