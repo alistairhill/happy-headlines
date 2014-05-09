@@ -1,13 +1,13 @@
 require_relative 'nytimes'
 
 class NewsItem
-  attr_reader :headline, :snippet, :good, :url
+  attr_reader :headline, :snippet, :good, :url, :image
 
   def initialize(snippet, headline, url) #make into hash
     @headline = headline
     @snippet = snippet[0..-2]
-    # @image = image
     @url = url
+    @image = image
     # @date = date
     @good = news_is_good
   end
@@ -15,7 +15,7 @@ class NewsItem
   def good_news_words
     good_news_array = %w(happy peace great good 
     rescued saved exonerated extension peace released
-    peaceful reward award kittens dolphins love)
+    peaceful reward award kittens dolphins love dbc)
   end
 
   def bad_news_words
@@ -28,7 +28,8 @@ class NewsItem
     suspended punch drugs crime broken gop politican gun
     guns ammo explosion ripped hurt egypt sues rwanda
     holocause genocide nuclear assault greed MH370 terror
-    poorly lethal sinking friction lawsuit)
+    poorly lethal sinking friction lawsuit crashed korea
+    indicted arrested disaster Economy)
   end
 
   def news_is_good
