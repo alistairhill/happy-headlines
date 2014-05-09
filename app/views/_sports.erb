@@ -1,0 +1,12 @@
+<div class="sports_page">
+  <% @sports.each do |story| %>
+  <!--   <div class='news_image'>
+      <img src="http://www.nytimes.com/images/2014/05/02/multimedia/derby-preview/derby-preview-thumbWide-v3.jpg">
+    </div> -->
+    <div class='news_container'>
+      <span class='headline'><%= story.headline %></span>
+      <p class='snippet'><%= story.snippet %> <a href="<%= story.url %>" target="_blank" class="more">read more</a>.</p>
+    </div>
+    <p>
+  <% end %>
+</div>

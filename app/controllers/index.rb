@@ -1,11 +1,17 @@
 get '/' do
   client = Nytimes::Client.new
-  @stories = client.get_news
-  @stories = @stories["response"]["docs"].map { |story| NewsItem.new(story["snippet"], story["headline"]["main"], story["web_url"]) }
-  @stories = @stories.select { |story| story.good }
+  @stories = client.parse_news
   erb :index
 end
 
-# get '/stories' do
+get '/news' do
+  client = Nytimes::Client.new
+  @stories = client.parse_news
+  erb :_news, layout: false
+end
 
-# end
+get '/sports' do
+  client = Nytimes::Client.new
+  @sports = client.parse_sports
+  erb :_sports, layout: false
+end
