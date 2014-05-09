@@ -12,7 +12,7 @@ module Nytimes
         )
     end
 
-    # def parse_news#(response)
+    # def parse_news
     #   get_news["response"]["docs"].map { |story| NewsItem.new(story["snippet"], story["headline"]["main"]) }
     # end
 

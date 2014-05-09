@@ -13,15 +13,39 @@ th {
   text-align: center;
 }
 
-#headline {
-  color: #333;
+.headline {
+  /*color: #333;*/
+
 }
 
-#snippet {
-  color: #444;
+.snippet {
+  /*color: #444;*/
+}
+
+.news_image {
+  border: black solid 1px;
+  /*float: left;*/
 }
 
 .news_container {
   border: black solid 1px;
+  background-color: rgba(200,200,200,0.5);
+/*  border-radius:12px;*/
+  /*border-bottom-left-radius:10px;*/
+  border-bottom-right-radius:10px;
   /*border-bottom: black solid 1px;*/
+  padding: 5px;
+  /*float: right;*/
+}
+.clear { clear: both;}
+
+a {
+  font-size: 12px;
+  color: #db4141;
+  text-decoration: none;
+}
+
+body {
+  /*background-image:url('../images/grass_large.jpg');*/
+  background-color: #eee;
 }
