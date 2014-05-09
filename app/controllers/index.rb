@@ -21,6 +21,6 @@ get '/date' do
   date = params[:date].gsub('-','')
   client.get_date(date)
   @stories = client.parse_date
-  erb :_news#, layout: false
+  erb :_news
 end
 

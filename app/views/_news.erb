@@ -1,5 +1,8 @@
 <div class="home_page">
   <% @stories.each do |story| %>
+    <div class='news_image'>
+      <img src="http://www.nytimes.com/images/2014/05/02/multimedia/derby-preview/derby-preview-thumbWide-v3.jpg">
+    </div>
     <div class='news_container'>
       <h2 class='headline'><%= story.headline %></h2>
       <p class='snippet'><%= story.snippet %> <a href="<%= story.url %>" target="_blank">read more</a>.</p>

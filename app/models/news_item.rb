@@ -28,7 +28,7 @@ class NewsItem
     suspended punch drugs crime broken gop politican gun
     guns ammo explosion ripped hurt egypt sues rwanda
     holocause genocide nuclear assault greed MH370 terror
-    poorly lethal)
+    poorly lethal sinking friction lawsuit)
   end
 
   def news_is_good
