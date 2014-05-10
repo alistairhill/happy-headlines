@@ -3,7 +3,7 @@ require_relative 'nytimes'
 class NewsItem
   attr_reader :headline, :snippet, :good, :url, :image
 
-  def initialize(snippet, headline, url) #make into hash
+  def initialize(snippet, headline, url, image) #make into hash
     @headline = headline
     @snippet = snippet[0..-2]
     @url = url
@@ -27,9 +27,9 @@ class NewsItem
     venting dementia attack kidnap kidnapped victim army
     suspended punch drugs crime broken gop politican gun
     guns ammo explosion ripped hurt egypt sues rwanda
-    holocause genocide nuclear assault greed MH370 terror
+    holocause genocide nuclear assault greed mh370 terror
     poorly lethal sinking friction lawsuit crashed korea
-    indicted arrested disaster Economy)
+    indicted arrested disaster economy phase2 rao)
   end
 
   def news_is_good
