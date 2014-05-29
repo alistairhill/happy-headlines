@@ -27,7 +27,7 @@ class NewsItem
     venting dementia attack kidnap kidnapped victim army
     suspended punch drugs crime broken gop politican gun
     guns ammo explosion ripped hurt egypt sues rwanda
-    holocause genocide nuclear assault greed mh370 terror
+    holocaust genocide nuclear assault greed mh370 terror
     poorly lethal sinking friction lawsuit crashed korea
     indicted arrested disaster economy phase2 rao)
   end
