@@ -7,22 +7,22 @@ module Nytimes
     URI = "http://api.nytimes.com/svc/search/v2/articlesearch.json"
     def get_news
       response = self.class.get(URI,
-        :query => { "api-key" => ENV['KEY'], news_desk:("AP")} 
-        )
+        :query => { "api-key" => ENV['KEY'],"page"=>(1), "fq=source" => "AP", "fq=news_desk" =>"National Desk"} 
+      )
     end
 
-    def parse_news 
-      return get_news["response"]["docs"].map { |story| NewsItem.new(story["snippet"], story["headline"]["main"], story["web_url"]) }.select {|story|story.good}
+    def parse_news
+      return get_news["response"]["docs"].map { |story| NewsItem.new(story["snippet"], story["headline"]["main"], story["web_url"])}.select {|story|story.good}
     end
 
     def get_sports
       response = self.class.get(URI,
-        :query => { "api-key" => ENV['KEY'], fq:("Sports")}
+        :query => { "api-key" => ENV['KEY'], "fq=news_desk" => "Sports"}
       )                                  
     end
 
     def parse_sports
-      return get_sports["response"]["docs"].map { |story| NewsItem.new(story["snippet"], story["headline"]["main"], story["web_url"])}.select {|story|story.good}
+      return parse_news["response"]["docs"].map { |story| NewsItem.new(story["snippet"], story["headline"]["main"], story["web_url"])}.select {|story|story.good}
     end
 
     def get_date(date)

@@ -7,9 +7,10 @@ class NewsItem
     @headline = headline
     @snippet = snippet[0..-2]
     @url = url
-    @image = image
+    # @image = image
     # @date = date
-    @good = news_is_good
+    @good = positive_news
+    @ok = boring_news
   end
 
   def good_news_words
@@ -32,10 +33,18 @@ class NewsItem
     indicted arrested disaster economy phase2 rao)
   end
 
-  def news_is_good
+  def positive_news
+    good_news_words.each do |word|
+      is_good = @headline.downcase.include?(word) || @snippet.downcase.include?(word)
+      return true if is_good
+    end
+    false
+  end
+
+  def boring_news
     bad_news_words.each do |word|
-      is_bad = @headline.downcase.include?(word) || @snippet.downcase.include?(word)
-      return false if is_bad
+      is_ok = @headline.downcase.include?(word) || @snippet.downcase.include?(word)
+      return false if is_ok
     end
     true
   end
