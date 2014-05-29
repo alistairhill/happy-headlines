@@ -3,7 +3,7 @@ require_relative 'nytimes'
 class NewsItem
   attr_reader :headline, :snippet, :good, :url, :image
 
-  def initialize(snippet, headline, url, image) #make into hash
+  def initialize(snippet, headline, url) #make into hash
     @headline = headline
     @snippet = snippet[0..-2]
     @url = url
