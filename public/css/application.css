@@ -1,5 +1,5 @@
 body {
-  background-image:url('../images/anchorman.jpg');
+  /*background-image:url('../images/anchorman.jpg');*/
   background-repeat:no-repeat;
   /*background-size:contain;*/
   background-position:top;
@@ -27,7 +27,7 @@ body {
 
 .header {
   font-size: 48px;
-  color: white;
+  color: black;
   font-family:"Franklin Gothic Medium";  
 }
 

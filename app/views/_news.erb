@@ -1,12 +1,9 @@
 <div class="home_page">
-  <% @stories.each do |story| %>
-<!--     <div class='news_image'>
-      <img src="http://www.nytimes.com/<%= story.image %>">
-    </div> -->
-    <div class='news_container'>
-      <h3 class='headline'><%= story.headline %></h3>
-      <p class='snippet'><%= story.snippet %> <a href="<%= story.url %>" target="_blank" class="read_more">read more</a>.</p>
-    </div>
-    <p>
-  <% end %>
+  <%@stories.each do |story| %>
+    <b><%=story.title%></b><br>
+  <!--   <img src="<%=story.image%>"><p> -->
+    <%=story.paragraph%><p>
+
+  <%end%>
+
 </div>
