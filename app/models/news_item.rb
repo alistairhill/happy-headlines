@@ -1,6 +1,6 @@
 
 class NewsItem
-  attr_reader :title, :paragraph, :good, :url, :image
+  attr_reader :title, :paragraph, :ok, :url, :image, :good
 
   def initialize(title, paragraph, image)
     @title = title
@@ -8,12 +8,12 @@ class NewsItem
     # @url = url
     @image = image
     # @date = date
-    # @good = positive_news
-    # @ok = boring_news
+    @good = positive_news
+    @ok = boring_news
   end
 
   def good_news_words
-    good_news_array = %w(happy peace great good 
+    good_news_array = %w(happy peace awesome amazing 
     rescued saved exonerated extension peace released
     peaceful reward award kittens dolphins love dbc)
   end
@@ -29,24 +29,24 @@ class NewsItem
     guns ammo explosion ripped hurt egypt sues rwanda
     holocaust genocide nuclear assault greed mh370 terror
     poorly lethal sinking friction lawsuit crashed korea
-    indicted arrested disaster economy phase2 rao)
+    indicted arrested disaster economy phase2)
   end
 
-  # def positive_news
-  #   good_news_words.each do |word|
-  #     is_good = @headline.downcase.include?(word) || @snippet.downcase.include?(word)
-  #     return true if is_good
-  #   end
-  #   false
-  # end
+  def positive_news
+    good_news_words.each do |word|
+      is_good = @title.downcase.include?(word) || @paragraph.downcase.include?(word)
+      return true if is_good
+    end
+    false
+  end
 
-  # def boring_news
-  #   bad_news_words.each do |word|
-  #     is_ok = @headline.downcase.include?(word) || @snippet.downcase.include?(word)
-  #     return false if is_ok
-  #   end
-  #   true
-  # end
+  def boring_news
+    bad_news_words.each do |word|
+      is_bad = @title.downcase.include?(word) || @paragraph.downcase.include?(word)
+      return false if is_bad
+    end
+    true
+  end
 end
 
 

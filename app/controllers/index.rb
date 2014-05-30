@@ -1,8 +1,14 @@
 get '/' do
   client = Npr::Client.new
-  @stories = client.parse_news
+  # begin
+    @stories = client.parse_news
+    erb :index
+  # rescue
+  #   status 404
+  #   "Sinatra didn't sing shit on that day"
+  # end
   # binding.pry
-  erb :index
+
 
 # @stories.paragraph.gsub('[Copyright 2014 NPR]')
 end
