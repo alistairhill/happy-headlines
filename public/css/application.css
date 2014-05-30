@@ -1,5 +1,6 @@
 body {
-  background-image:url('../images/cloud_sky.jpg');
+  background-image:url('../images/cloud_sky0.jpg');
+  background-position: right bottom;
   background-repeat:no-repeat;
   background-size: cover;
   /*background-size:contain;*/
@@ -24,12 +25,14 @@ body {
   text-align: center;
   width: 100%;
   color: white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   /*background-color: #487BC1;*/
   /*background-color: rgba(255,255,255,0.1);*/
 }
 
 .header-image {
   width:600px;
+  height: 20px;
   margin-bottom: -20px;
   font-family:"Franklin Gothic Medium";  
 }
@@ -37,16 +40,17 @@ body {
 .story-container {
   border: black solid 0px;
   background-color: rgba(255,255,255,0.3);
-  border-bottom-right-radius:10px;
-  border-top-right-radius:10px;
+  border-radius: 12px;
+  /*border-bottom-right-radius:10px;*/
+  /*border-top-right-radius:10px;*/
   padding: 5px;
-  border-left: #ddd solid 5px;
+  /*border-left: #ddd solid 5px;*/
   padding-left: 10px;
   /*float: right;*/
 }
 
 .story-title {
-  font-family:"Franklin Gothic Medium";
+  font-family:Impact, Charcoal, sans-serif;
   font-size: 20px;
   margin-top: 0;
   margin-bottom: 5px;
@@ -68,12 +72,13 @@ body {
 .story-image {
   height: 85px;
   width: 85px;
-  border: black solid 1px;
+  border: #555 solid 1px;
 }
 
 .story-paragraph {
   color: #222;
-  font: 13pt Helvetica, sans-serif;
+  font-size: 13pt;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .clear { clear: both;}
@@ -98,7 +103,7 @@ footer {
   text-align: center;
   width: 100%;
   background-color: #b9d1ea;
-  height: 40px;
+  height: 27px;
   position: fixed;
   bottom: 0;
   color: #222;

@@ -11,20 +11,21 @@
 </head>
 <body>
   <div class="header">
-    <img class=header-image src="../images/hh_clouds.png">
+    <img class=header-image src="../images/hh_clouds2.png">
   </div>
   <div class="navbar">
-    <a href="/news" class="home_link">News</a> | 
-    <a href="/sports" class="sports_link">Sports</a> | 
+    <a href="/news" class="stories">News</a> | 
+    <a href="/sports" class="sports">Sports</a> | 
     <a href="#" class="ap_link">AP</a> | 
     <a href="#" class="foreign_link">Foreign</a>
   </div>
   <div class="date">
     <form action="/date" method="get">
-      <input  type="date" name="date" required> <!-- style="width:130px" -->
+      <input  type="date" name="date"> <!-- style="width:130px" -->
       <input type="submit" value="submit">
     </form>
   </div>
+
   <div class='container'>
     <%= yield %>
   </div>
