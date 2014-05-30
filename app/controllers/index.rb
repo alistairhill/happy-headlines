@@ -25,10 +25,7 @@ end
 get '/date' do
   client = Npr::Client.new
   date = params[:date]#.gsub('-','')
-  p date
-  p"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-  client.get_date(date)
-  @stories = client.parse_date
+  @stories = client.get_date(date)
   erb :_news
 end
 
