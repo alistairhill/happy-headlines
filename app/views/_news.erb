@@ -1,9 +1,9 @@
 <div class="home_page">
   <%@stories.each do |story| %>
-    <b><%=story.title%></b><br>
-  <!--   <img src="<%=story.image%>"><p> -->
-    <%=story.paragraph%><p>
-
+    <div class='story-container'>
+      <div class="story-title"><%=story.title%></div><div class="story-date"><%=story.date%></div>
+      <div class="story-image-container"><img class="story-image" src="<%=story.image%>"></div>
+      <div class="story-paragraph"><%=story.paragraph%></div>
+    </div><p>
   <%end%>
-
 </div>

@@ -5,7 +5,7 @@ module Npr
 
     # URI = "http://api.npr.org/query?orgId=0&fields=title,teaser,storyDate,show,image,text,relatedLink&dateType=story&sort=dateAsc&output=JSON&numResults=50&"
     #sports id=1055
-    URI = "http://api.npr.org/query?id=0&fields=title,storyDate,image,text,textWithHtml&requiredAssets=text,image&dateType=story&sort=dateAsc&output=JSON&numResults=50&"
+    URI = "http://api.npr.org/query?orgId=0&fields=title,storyDate,image,text,textWithHtml&requiredAssets=text,image&dateType=story&sort=dateAsc&output=JSON&numResults=50&"
     def get_news
       response = self.class.get(URI,
         :query => { "apiKey" => ENV['PIN']} #, date:"2013-05-29" 
@@ -15,8 +15,7 @@ module Npr
 
     def parse_news
       return get_news["list"]["story"].map {|story| NewsItem.new(story["title"]["$text"], story["storyDate"]["$text"], story["text"]["paragraph"].inject(" "){|memo, num| memo+ " " + num["$text"]}, story["image"][0]["src"])}
-      # .select {|story|story.ok && story.good}
-
+      .select {|story|story.ok}# && story.good}
     end
 
     # def cacheStories(parse_news)
@@ -32,8 +31,6 @@ module Npr
     #   comments = commentData.map { |comment| Comment.create(comment) }
     # end
     
-
-
     def get_date(date)
       @changed_date = self.class.get(URI,
         :query => { "api-key" => ENV['KEY'], news_desk:("AP"),  end_date:(date)} 

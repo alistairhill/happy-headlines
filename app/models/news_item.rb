@@ -1,14 +1,13 @@
-
 class NewsItem
-  attr_reader :title, :paragraph, :ok, :image, :good
+  attr_reader :title, :paragraph, :ok, :image, :good, :date
 
   def initialize(title, date, paragraph, image)
     @title = title
-    @paragraph = paragraph#[0..-2]
+    @paragraph = paragraph.gsub('[Copyright 2014 NPR]', '')
     @image = image
-    @date = date
+    @date = date[0..-15]
     # @good = positive_news
-    # @ok = boring_news
+    @ok = boring_news
   end
 
   def good_news_words
@@ -47,5 +46,3 @@ class NewsItem
     true
   end
 end
-
-

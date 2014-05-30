@@ -1,6 +1,12 @@
 $(document).ready(function() {
   $('#sports_link').on('click', sportsPage);
   $('#home_link').on('click', homePage);
+
+  $('.story-more').on('click', 'button', function() {
+    $(this).closest('.story-more').find('.ticket').slideToggle()
+  })
+
+
 });
 
 var sportsPage = function(event) {

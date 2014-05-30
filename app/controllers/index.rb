@@ -2,7 +2,7 @@ get '/' do
   client = Npr::Client.new
   begin
     @stories = client.parse_news
-    # @stories.paragraph.gsub(' [Copyright 2014 NPR]', '')
+    # @stories.paragraph.gsub('[Copyright 2014 NPR]', '')
     erb :index
   rescue
     status 404
