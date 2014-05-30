@@ -1,12 +1,10 @@
 body {
-  background-image:url('../images/cloud_sky0.jpg');
+  background-image:url('../images/cloud_sky.jpg');
   background-position: right bottom;
   background-repeat:no-repeat;
   background-size: cover;
-  /*background-size:contain;*/
   background-position:top;
   font: 12pt Helvetica, sans-serif;
-  /*background-position: 0px 60px;*/
 }
 
 .container {
@@ -19,20 +17,27 @@ body {
   overflow: scroll;
 }
 
-.header, .navbar, .date {
+.header, .navbar{
   padding: 5px;
   width: 100%;
   text-align: center;
   width: 100%;
   color: white;
   font-family: "Comic Sans MS", cursive, sans-serif;
-  /*background-color: #487BC1;*/
-  /*background-color: rgba(255,255,255,0.1);*/
+}
+
+ .date-form  {
+  text-align: center;
+  color: white;
+}
+
+ .date-form input {
+  color: white;
+  background-color: transparent;
 }
 
 .header-image {
   width:600px;
-  height: 20px;
   margin-bottom: -20px;
   font-family:"Franklin Gothic Medium";  
 }
@@ -41,12 +46,8 @@ body {
   border: black solid 0px;
   background-color: rgba(255,255,255,0.3);
   border-radius: 12px;
-  /*border-bottom-right-radius:10px;*/
-  /*border-top-right-radius:10px;*/
   padding: 5px;
-  /*border-left: #ddd solid 5px;*/
   padding-left: 10px;
-  /*float: right;*/
 }
 
 .story-title {
@@ -108,4 +109,5 @@ footer {
   bottom: 0;
   color: #222;
   padding: 10px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }

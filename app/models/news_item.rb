@@ -27,7 +27,8 @@ class NewsItem
     guns ammo explosion ripped hurt egypt sues rwanda
     holocaust genocide nuclear assault greed mh370 terror
     poorly lethal sinking friction lawsuit crashed korea
-    indicted arrested disaster economy phase2)
+    indicted arrested disaster economy homeless tumultuous
+    phase2)
   end
 
   def positive_news

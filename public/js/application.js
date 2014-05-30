@@ -2,10 +2,9 @@ $(document).ready(function() {
   $('.sports').on('click', sportsPage);
   $('.stories').on('click', homePage);
 
-  $('.story-more').on('click', 'button', function() {
-    $(this).closest('.story-more').find('.ticket').slideToggle()
-  })
-
+  // $('.story-more').on('click', 'button', function() {
+  //   $(this).closest('.story-more').find('.unread').slideToggle()
+  // })
 
 });
 
@@ -25,7 +24,7 @@ var appendSportsArticles = function(response) {
   $('.container').append(response)
 }
 
-var homePage = function(event) {
+var newsPage = function(event) {
   event.preventDefault();
   console.log(event.target.href)
 
@@ -33,10 +32,10 @@ var homePage = function(event) {
     url: event.target.href,
     type: 'GET'
   })
-  ajaxRequest.done(appendHomePage)
+  ajaxRequest.done(appendNewsPage)
 }
 
-var appendHomePage = function(response) {
+var appendNewsPage = function(response) {
   $('.home_page').remove()
   $('.sports_page').remove()
   $('.container').append(response)
