@@ -1,15 +1,14 @@
 
 class NewsItem
-  attr_reader :title, :paragraph, :ok, :url, :image, :good
+  attr_reader :title, :paragraph, :ok, :image, :good
 
-  def initialize(title, paragraph, image)
+  def initialize(title, date, paragraph, image)
     @title = title
     @paragraph = paragraph#[0..-2]
-    # @url = url
     @image = image
-    # @date = date
-    @good = positive_news
-    @ok = boring_news
+    @date = date
+    # @good = positive_news
+    # @ok = boring_news
   end
 
   def good_news_words
