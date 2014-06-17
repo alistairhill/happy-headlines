@@ -13,7 +13,7 @@ class NewsItem
   def good_news_words
     good_news_array = %w(happy peace awesome amazing 
     rescued saved exonerated extension peace released
-    peaceful reward award kittens dolphins love dbc)
+    peaceful reward award kittens dolphins love rao)
   end
 
   def bad_news_words
@@ -28,16 +28,9 @@ class NewsItem
     holocaust genocide nuclear assault greed mh370 terror
     poorly lethal sinking friction lawsuit crashed korea
     indicted arrested disaster economy homeless tumultuous
-    phase2)
+    phase2 bankruptcy)
   end
 
-  def positive_news
-    good_news_words.each do |word|
-      is_good = @title.downcase.include?(word) || @paragraph.downcase.include?(word)
-      return true if is_good
-    end
-    false
-  end
 
   def boring_news
     bad_news_words.each do |word|
@@ -45,5 +38,14 @@ class NewsItem
       return false if is_bad
     end
     true
+  end
+
+
+  def positive_news
+    good_news_words.each do |word|
+      is_good = @title.downcase.include?(word) || @paragraph.downcase.include?(word)
+      return true if is_good
+    end
+    false
   end
 end

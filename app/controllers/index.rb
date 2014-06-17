@@ -4,7 +4,7 @@ get '/' do
     @stories = client.parse_news
     erb :index
   rescue
-    status 404
+
     "Sinatra didn't sing shit on that day"
   end
 end

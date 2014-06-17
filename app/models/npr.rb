@@ -11,7 +11,6 @@ module Npr
       "space" => 1026,
       "technology" => 1019,
       "humor" =>1052,
-      "fineart" => 1141,
       "digital" => 1049
     }
 
