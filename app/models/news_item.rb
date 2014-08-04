@@ -1,21 +1,19 @@
-require_relative 'nytimes'
-
 class NewsItem
-  attr_reader :headline, :snippet, :good, :url, :image
+  attr_reader :title, :paragraph, :ok, :image, :good, :date
 
-  def initialize(snippet, headline, url) #make into hash
-    @headline = headline
-    @snippet = snippet[0..-2]
-    @url = url
+  def initialize(title, date, paragraph, image)
+    @title = title
+    @paragraph = paragraph.gsub('[Copyright 2014 NPR]', '')
     @image = image
-    # @date = date
-    @good = news_is_good
+    @date = date[0..-15]
+    # @good = positive_news
+    @ok = boring_news
   end
 
   def good_news_words
-    good_news_array = %w(happy peace great good 
+    good_news_array = %w(happy peace awesome amazing 
     rescued saved exonerated extension peace released
-    peaceful reward award kittens dolphins love dbc)
+    peaceful reward award kittens dolphins love rao)
   end
 
   def bad_news_words
@@ -27,18 +25,27 @@ class NewsItem
     venting dementia attack kidnap kidnapped victim army
     suspended punch drugs crime broken gop politican gun
     guns ammo explosion ripped hurt egypt sues rwanda
-    holocause genocide nuclear assault greed MH370 terror
+    holocaust genocide nuclear assault greed mh370 terror
     poorly lethal sinking friction lawsuit crashed korea
-    indicted arrested disaster Economy)
+    indicted arrested disaster economy homeless tumultuous
+    phase2 bankruptcy)
   end
 
-  def news_is_good
+
+  def boring_news
     bad_news_words.each do |word|
-      is_bad = @headline.downcase.include?(word) || @snippet.downcase.include?(word)
+      is_bad = @title.downcase.include?(word) || @paragraph.downcase.include?(word)
       return false if is_bad
     end
     true
   end
+
+
+  def positive_news
+    good_news_words.each do |word|
+      is_good = @title.downcase.include?(word) || @paragraph.downcase.include?(word)
+      return true if is_good
+    end
+    false
+  end
 end
-
-

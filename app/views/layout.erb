@@ -10,21 +10,26 @@
   <title>Happy Headlines</title>
 </head>
 <body>
-  <div id="header">
-    Happy Headlines
+  <div class="header">
+    <img class=header-image src="../images/hh_clouds.png">
   </div>
-  <div id="links">
-    <a href="/news" id="home_link">News</a> | 
-    <a href="/sports" id="sports_link">Sports</a> | 
-    <a href="#" id="ap_link">AP</a> | 
-    <a href="#" id="foreign_link">Foreign</a>
+  <div class="navbar">
+    <a href="/categories/news">News</a> | 
+    <a href="/categories/sports">Sports</a> | 
+    <a href="/categories/pop">Pop Culture</a> | 
+    <a href="/categories/science">Science</a> | 
+    <a href="/categories/space">Space</a> | 
+    <a href="/categories/technology">Technology</a> | 
+    <a href="/categories/humor">Games and Humor</a> | 
+    <a href="/categories/digital">Digital Life</a>
   </div>
-  <div id="date">
-      <form action="/date" method="get">
-      <input type="date" name="date">
-      <input type="submit" value="submit">
+  <div class="date-form">
+    <form action="/date" method="get">
+      <input  type="date" name="date" style="width:150px">
+      <input type="submit" value="Happy News?">
     </form>
   </div>
+
   <div class='container'>
     <%= yield %>
   </div>

@@ -1,9 +1,9 @@
 body {
-  background-image:url('../images/anchorman.jpg');
+  background-image:url('../images/cloud_sky.jpg');
+  background-position: right bottom;
   background-repeat:no-repeat;
-  /*background-size:contain;*/
+  background-size: cover;
   background-position:top;
-  background-color: #555;
   font: 12pt Helvetica, sans-serif;
 }
 
@@ -13,56 +13,75 @@ body {
   min-width: 320px;
   max-width: 700px;
   padding: 10px 10px 10px 10px;
-  height: 520px;
+  height: 530px;
   overflow: scroll;
 }
 
-#header, #links, #date {
+.header, .navbar{
+  padding: 5px;
+  width: 100%;
   text-align: center;
   width: 100%;
   color: white;
-  background-color: #111;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-#header {
-  font-size: 50px;
+ .date-form  {
+  text-align: center;
   color: white;
+}
+
+ .date-form input {
+  color: white;
+  background-color: transparent;
+}
+
+.header-image {
+  width:600px;
+  margin-bottom: -20px;
   font-family:"Franklin Gothic Medium";  
 }
 
-#date {
-  padding: 5px;
-
-}
-
-.headline {
-  /*color: #eee;*/
-  font-family:"Franklin Gothic Medium";
-  font-size: 30px;
-  margin-top: 0;
-  margin-bottom: -5px;
-}
-
-.snippet {
-  color: #000;
-}
-
-.news_image {
-  border: black solid 1px;
-  /*float: left;*/
-}
-
-.news_container {
+.story-container {
   border: black solid 0px;
-  background-color: rgba(255,255,255,0.7);
-  border-bottom-right-radius:10px;
-  border-top-right-radius:10px;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 12px;
   padding: 5px;
-  border-left: #eee solid 5px;
   padding-left: 10px;
-  /*float: right;*/
-
 }
+
+.story-title {
+  font-family:Impact, Charcoal, sans-serif;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  position: block
+  color: #555;
+}
+
+.story-date {
+  position: block
+}
+
+.clear { clear: both;}
+
+.story-image-container {
+  float: left;
+  margin: 5px 7px 0px 0px;
+}
+
+.story-image {
+  height: 85px;
+  width: 85px;
+  border: #555 solid 1px;
+}
+
+.story-paragraph {
+  color: #222;
+  font-size: 13pt;
+  font-family: "Courier New", Courier, monospace;
+}
+
 .clear { clear: both;}
 
 .read_more {
@@ -84,10 +103,11 @@ input {
 footer {
   text-align: center;
   width: 100%;
-  background-color: #111;
-  height: 40px;
+  background-color: #b9d1ea;
+  height: 27px;
   position: fixed;
   bottom: 0;
-  color: #eee;
+  color: #222;
   padding: 10px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }

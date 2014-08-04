@@ -6,10 +6,13 @@ body {
   margin: 5px auto;
   width: 320px;
   padding: 10px 10px 10px 10px;
-  /*border: 1px dotted white;*/
 }
 
 #header {
   font-size: 40px;
   color: white;
+}
+
+.header-image {
+  width:100%;
 }

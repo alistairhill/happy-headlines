@@ -1,26 +1,24 @@
 get '/' do
-  client = Nytimes::Client.new
-  @stories = client.parse_news
-  erb :index
+  client = Npr::Client.new
+  begin
+    @stories = client.parse_news
+    erb :index
+  rescue
+
+    "Sinatra didn't sing shit on that day"
+  end
 end
 
-get '/news' do
-  client = Nytimes::Client.new
-  @stories = client.parse_news
-  erb :_news, layout: false
-end
-
-get '/sports' do
-  client = Nytimes::Client.new
-  @stories = client.parse_sports
-  erb :_news, layout: false
+get '/categories/:category' do
+  client = Npr::Client.new
+  @stories = client.parse_news(params[:category])
+  erb :_news
 end
 
 get '/date' do
-  client = Nytimes::Client.new
-  date = params[:date].gsub('-','')
-  client.get_date(date)
-  @stories = client.parse_date
+  client = Npr::Client.new
+  date = params[:date]
+  @stories = client.get_date(date)
   erb :_news
 end
 
